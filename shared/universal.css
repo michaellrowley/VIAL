@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200;400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+/*	--background-color-main: #efefef;
+	--foreground-color-font: #101010;
+	--foreground-color-main: #344676;
+	--tint: rgba(0, 0, 0, 0.05);
+	--more-tint: rgba(0, 0, 0, 0.2);
+	--med-tint: rgba(0, 0, 0, 0.5);
+	--max-tint: rgba(0, 0, 0, 0.8); */
+
+	--background-color-main: #101010;
+	--foreground-color-font: #efefef;
+	--foreground-color-main: #CBB989;
+	--tint: rgba(255, 255, 255, 0.05);
+	--more-tint: rgba(255, 255, 255, 0.2);
+	--med-tint: rgba(255, 255, 255, 0.5);
+	--max-tint: rgba(255, 255, 255, 0.8);
+
+	--main-font: 'Overpass', helvetica, arial, sans-serif;
+	--progress-number-font: 'Montserrat', helvetica, monospace, arial, sans-serif;
+}
+
+body {
+	margin: 0;
+	padding-bottom: 3%;
+	color: var(--foreground-color-font);
+	background-color: var(--background-color-main);
+}
+
+h1 {
+	color: var(--foreground-color-main);
+	font-family: var(--main-font);
+	font-weight: 400;
+	text-align: center;
+	font-size: 40pt;
+	cursor: default;
+}
+
+h2 {
+	font-family: var(--main-font);
+	font-weight: 700;
+	margin-bottom: 0;
+}
+
+p {
+	font-family: var(--main-font);
+	font-weight: 400;
+	margin-top: 0;
+}
+
+input, button, select, textarea {
+	border-radius: 5px;
+	border: 2px solid var(--foreground-color-main);
+	color: var(--max-tint);
+}
+
+textarea {
+	background-color: var(--tint);
+}
+
+input, select {
+	background-color: var(--tint);
+}
+
+button {
+	user-select: none;
+	background-color: var(--foreground-color-main);
+	color: var(--background-color-main);
+}
+
+input:hover {
+	background-color: var(--more-tinted);
+	transition: 0.1s;
+}
+
+input/*[type="text"]*/ {
+	font-size: 15pt;
+	font-family: var(--main-font);
+	font-weight: 200;
+	padding: 2px 4px;
+}
+
+input:hover {
+	cursor: text;
+}
+
+button, select {
+	font-family: var(--main-font);
+	font-size: 15pt;
+	padding: 3px 15px;
+	font-weight: 700;
+	transition: 0.2s;
+}
+
+button:hover {
+	cursor: pointer;
+	box-shadow: 0 0 4px var(--foreground-color-main);
+}
+
+hr {
+	opacity: 0.4;
+	margin: 20px 0 0 0;
+}
+
+a {
+	color: var(--foreground-color-font);
+}
+
+/*  */
+div#color-toggle {
+	background-color: var(--foreground-color-main);
+	color: var(--background-color-main);
+	width: fit-content;
+	padding: 5px 10px;
+	border-radius: 0 0 5px 5px;
+	margin-left: 10px;
+	box-shadow: 0 0 5px var(--foreground-color-main);
+	transition: 0.2s;
+	font-family: var(--main-font);
+	font-weight: 700;
+	position: fixed;
+	top: 0;
+}
+
+div#color-toggle:hover {
+	box-shadow: 1px 1px 10px var(--foreground-color-main);
+	cursor: pointer;
+}
+
+@keyframes load-opac {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+			opacity: 1;
+	}
+}
+.loading-div {
+	animation: load-opac 1s infinite;
+	font-size: 30px;
+}
